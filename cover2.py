@@ -1,4 +1,4 @@
-from flask import Flask, request, send_file, render_template_string
+from flask import Flask, request, send_file, render_template
 from PIL import Image, ImageDraw, ImageFont
 import os
 
@@ -88,8 +88,8 @@ def index():
         # 发送处理后的图片供用户下载
         return send_file(output_path, as_attachment=True)
 
-    # 渲染 HTML 模板    
-    return render_template_string(index.html)
+    # 渲染 HTML 模板
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
