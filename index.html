@@ -2,9 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My GitHub Pages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>出版物送审封面制作📔</title>
+    <style>
+        /* 整体页面背景和布局 */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f6f8f9 0%, #e5ebee 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* 主容器样式 */
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            width: 400px;
+        }
+
+        /* 标题样式 */
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* 表单样式 */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 标签样式 */
+        label {
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        /* 输入框样式 */
+        input {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        /* 出版物名称输入框特殊样式，设置更长 */
+        #publication_name {
+            width: 100%;
+        }
+
+        /* 按钮样式 */
+        button {
+            padding: 12px;
+            background: linear-gradient(to right, #FFD700, #FFA500); /* 渐变金黄色 */
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 16px;
+        }
+
+        /* 按钮悬停效果 */
+        button:hover {
+            background: linear-gradient(to right, #FFA500, #FFD700); /* 渐变金黄色（反向） */
+            transform: scale(1.02);
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, GitHub Pages!</h1>
+    <div class="container">
+        <h1>出版物送审封面制作📔</h1>
+        <form method="post">
+            <label for="publication_name">请输入出版物名称:</label>
+            <input type="text" id="publication_name" name="publication_name" required>
+            <label for="edition_number">请输入版号:</label>
+            <input type="text" id="edition_number" name="edition_number" required>
+            <button type="submit">下载图片</button>
+        </form>
+    </div>
 </body>
 </html>
